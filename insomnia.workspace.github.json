@@ -1,0 +1,318 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2018-07-30T19:02:43.978Z",
+	"__export_source": "insomnia.desktop.app:v5.16.6",
+	"resources": [
+		{
+			"_id": "wrk_d31222b058e2482abb1837ed4b7ccf84",
+			"created": 1532971917206,
+			"description": "",
+			"modified": 1532971917206,
+			"name": "Insomnia",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_0224eda7455f4b4d939064dda03891d3",
+			"color": null,
+			"created": 1532971917243,
+			"data": {
+				"repo": "swagger-codegen",
+				"token": "???"
+			},
+			"isPrivate": false,
+			"modified": 1532976731466,
+			"name": "New Environment",
+			"parentId": "wrk_d31222b058e2482abb1837ed4b7ccf84",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_258273397de14f1cbf79377393f8d2ee",
+			"cookies": [],
+			"created": 1532971917318,
+			"modified": 1532977295262,
+			"name": "Default Jar",
+			"parentId": "wrk_d31222b058e2482abb1837ed4b7ccf84",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "req_b9c04ee7d6274bf59e9db33a8f745c4d",
+			"authentication": {
+				"prefix": "token",
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1532974495022,
+			"description": "",
+			"headers": [
+				{
+					"disabled": false,
+					"id": "pair_cd4708187e3649c588f60ff9bc40c109",
+					"name": "Accept",
+					"value": "application/vnd.github.v3+json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1532972198284,
+			"method": "GET",
+			"modified": 1532976083225,
+			"name": "me",
+			"parameters": [],
+			"parentId": "wrk_d31222b058e2482abb1837ed4b7ccf84",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "https://api.github.com/user",
+			"_type": "request"
+		},
+		{
+			"_id": "req_e46a7dfa071140b0a15ef3e09315eccd",
+			"authentication": {},
+			"body": {},
+			"created": 1532975103084,
+			"description": "",
+			"headers": [
+				{
+					"disabled": true,
+					"id": "pair_0786a6abdb7748b1ab15a14d334560e1",
+					"name": "If-Modified-Since",
+					"value": "{% response 'header', 'req_e46a7dfa071140b0a15ef3e09315eccd', 'Last-Modified' %}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1532972198234,
+			"method": "GET",
+			"modified": 1532976080313,
+			"name": "my avatar",
+			"parameters": [],
+			"parentId": "wrk_d31222b058e2482abb1837ed4b7ccf84",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{% response 'body', 'req_b9c04ee7d6274bf59e9db33a8f745c4d', '$.avatar_url' %}",
+			"_type": "request"
+		},
+		{
+			"_id": "req_aad4a5acaeb74a19bfa23bfe2e6a8de4",
+			"authentication": {
+				"prefix": "token",
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1532975483506,
+			"description": "",
+			"headers": [
+				{
+					"disabled": false,
+					"id": "pair_cd4708187e3649c588f60ff9bc40c109",
+					"name": "Accept",
+					"value": "application/vnd.github.v3+json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1532972198184,
+			"method": "GET",
+			"modified": 1532976076745,
+			"name": "my precious repo",
+			"parameters": [],
+			"parentId": "wrk_d31222b058e2482abb1837ed4b7ccf84",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "https://api.github.com/repos/keynslug/{{ repo  }}",
+			"_type": "request"
+		},
+		{
+			"_id": "req_c85cec8b3ddd43839fdc934d3d308da0",
+			"authentication": {
+				"prefix": "token",
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1532975797167,
+			"description": "",
+			"headers": [
+				{
+					"disabled": false,
+					"id": "pair_cd4708187e3649c588f60ff9bc40c109",
+					"name": "Accept",
+					"value": "application/vnd.github.v3+json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1532972198134,
+			"method": "GET",
+			"modified": 1532976074410,
+			"name": "its source repo",
+			"parameters": [],
+			"parentId": "wrk_d31222b058e2482abb1837ed4b7ccf84",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{% response 'body', 'req_aad4a5acaeb74a19bfa23bfe2e6a8de4', '$.source.url' %}",
+			"_type": "request"
+		},
+		{
+			"_id": "req_c8a2b47040244f8082b304e7701ce1bc",
+			"authentication": {},
+			"body": {},
+			"created": 1532975897460,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_3439f16e83e745d0856996f5cffd5df1",
+					"name": "Accept",
+					"value": "text/plain"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1532972198084,
+			"method": "GET",
+			"modified": 1532976070946,
+			"name": "its plain text representation",
+			"parameters": [],
+			"parentId": "wrk_d31222b058e2482abb1837ed4b7ccf84",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{% response 'body', 'req_c85cec8b3ddd43839fdc934d3d308da0', '$.html_url' %}",
+			"_type": "request"
+		},
+		{
+			"_id": "req_742362ec71204cba9d62cba750e7ed74",
+			"authentication": {
+				"prefix": "token",
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1532976133888,
+			"description": "",
+			"headers": [
+				{
+					"disabled": false,
+					"id": "pair_cd4708187e3649c588f60ff9bc40c109",
+					"name": "Accept",
+					"value": "application/vnd.github.v3+json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1532972198034,
+			"method": "GET",
+			"modified": 1532976539625,
+			"name": "its commits",
+			"parameters": [],
+			"parentId": "wrk_d31222b058e2482abb1837ed4b7ccf84",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{% response 'body', 'req_c85cec8b3ddd43839fdc934d3d308da0', '$.url' %}/commits",
+			"_type": "request"
+		},
+		{
+			"_id": "req_12c354a5f16246e1bb6aac71ee417a6d",
+			"authentication": {
+				"prefix": "token",
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1532976545159,
+			"description": "",
+			"headers": [
+				{
+					"disabled": false,
+					"id": "pair_cd4708187e3649c588f60ff9bc40c109",
+					"name": "Accept",
+					"value": "application/vnd.github.v3+json"
+				},
+				{
+					"disabled": true,
+					"id": "pair_0922850b221c4918b779656da7df6906",
+					"name": "Accept",
+					"value": "application/vnd.github.v3.patch"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1532972197984,
+			"method": "GET",
+			"modified": 1532976845289,
+			"name": "its latest commit as patch",
+			"parameters": [],
+			"parentId": "wrk_d31222b058e2482abb1837ed4b7ccf84",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{% response 'body', 'req_742362ec71204cba9d62cba750e7ed74', '$[0].url' %}",
+			"_type": "request"
+		},
+		{
+			"_id": "req_80a3eb59120140ec985840c24a3639fc",
+			"authentication": {
+				"prefix": "token",
+				"token": "{{ token  }}",
+				"type": "bearer"
+			},
+			"body": {},
+			"created": 1532976988716,
+			"description": "",
+			"headers": [
+				{
+					"disabled": false,
+					"id": "pair_cd4708187e3649c588f60ff9bc40c109",
+					"name": "Accept",
+					"value": "application/vnd.github.v3+json"
+				},
+				{
+					"disabled": true,
+					"id": "pair_e5e12ae5820749d59f4ff4d8b6034ee8",
+					"name": "Accept",
+					"value": "application/vnd.github.v3.html+json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1532972197934,
+			"method": "GET",
+			"modified": 1532977198553,
+			"name": "its issues",
+			"parameters": [
+				{
+					"id": "pair_92fb1475a0274533ba274d458cece597",
+					"name": "state",
+					"value": "open"
+				},
+				{
+					"id": "pair_3e87b89093ec4344beccb7f546ceb32d",
+					"name": "labels",
+					"value": "Client: Erlang"
+				}
+			],
+			"parentId": "wrk_d31222b058e2482abb1837ed4b7ccf84",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{% response 'body', 'req_c85cec8b3ddd43839fdc934d3d308da0', '$.url' %}/issues",
+			"_type": "request"
+		}
+	]
+}

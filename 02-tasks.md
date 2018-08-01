@@ -27,6 +27,6 @@ layout: true
 
 ...Ну или рассказать, почему что-то из этого не удалось выполнить.
 
-Репозиторий: `rbkmoney/camp-net-rest-bite`
+Репозиторий: `keynslug/camp-net-http-bite`
 
 Не забудьте выписать себе _Authorization Token_ и указать его в workspace environment.
